@@ -29,10 +29,11 @@ passport.use(
   })
 )
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
+
+
 
 router.get('/auth',passport.authenticate( 'google',{ failureRedirect:'/localhost:3000/'}) ,function(req, res, next) {
   res.render('profile');

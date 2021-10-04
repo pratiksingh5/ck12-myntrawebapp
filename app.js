@@ -18,12 +18,9 @@ app.set('view engine', 'ejs');
 
 app.use(passport.initialize());
 app.use(passport.session())
-
 passport.serializeUser(function(UserModel,done){
   done(null,UserModel)
 })
-
-
 passport.serializeUser(function(obj,done){
   done(null,obj)
 })
